@@ -25,8 +25,6 @@ public class Add_address extends AppCompatActivity {
     private EditText Type_edit;
     private boolean isdefault=false;
     private Switch aSwitch;
-    private String str="";
-    //123456
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
