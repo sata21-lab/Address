@@ -6,13 +6,14 @@ public class AddressModel {
     private String type;
     private String Address;
     private String sqlite_id;
-
-    public AddressModel(String sqlite_id,String Name, String Phone,String Address,String type) {
+    private String morenid;
+    public AddressModel(String sqlite_id,String Name, String Phone,String Address,String type,String morenid) {
         this.sqlite_id=sqlite_id;
         this.Name=Name;
         this.Phone=Phone;
         this.type=type;
         this.Address=Address;
+        this.morenid=morenid;
     }
     public String getName() {
         return Name;
@@ -52,6 +53,14 @@ public class AddressModel {
 
     public void setSqlite_id(String sqlite_id) {
         this.sqlite_id = sqlite_id;
+    }
+
+    public String getMorenid() {
+        return morenid;
+    }
+
+    public void setMorenid(String morenid) {
+        this.morenid = morenid;
     }
 }
 

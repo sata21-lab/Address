@@ -54,7 +54,8 @@ public class MainActivity extends AppCompatActivity {
                     cursor.getString(cursor.getColumnIndex("Name"))
                     , format(cursor.getString(cursor.getColumnIndex("Phone"))),
                     cursor.getString(cursor.getColumnIndex("address")),
-                    cursor.getString(cursor.getColumnIndex("type")));
+                    cursor.getString(cursor.getColumnIndex("type")),
+                    cursor.getString(cursor.getColumnIndex("default_address")));
             addressModelList.add(address);
         }
         adapter.notifyDataSetChanged();

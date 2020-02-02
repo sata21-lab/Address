@@ -26,6 +26,7 @@ public class AddressAdapter extends RecyclerView.Adapter<AddressAdapter.ViewHold
         TextView type;
         TextView sqlite_id;
         TextView default_address_view;
+        TextView morenid;
         public ViewHolder(View view) {
             super(view);
             AddressView = view;
@@ -35,6 +36,7 @@ public class AddressAdapter extends RecyclerView.Adapter<AddressAdapter.ViewHold
             type=view.findViewById(R.id.type);
             sqlite_id=view.findViewById(R.id.sqlite_id);
             default_address_view=view.findViewById(R.id.default_address_view);
+            morenid=view.findViewById(R.id.moren);
         }
     }
 
@@ -94,8 +96,13 @@ public class AddressAdapter extends RecyclerView.Adapter<AddressAdapter.ViewHold
         holder.Address.setText(addressModel.getAddress());
         holder.type.setText(addressModel.getType());
         holder.sqlite_id.setText(addressModel.getSqlite_id());
-        if(position==0){
+        holder.morenid.setText(addressModel.getMorenid());
+        if(addressModel.getMorenid().equals("1")){
+            //Log.i("测试", "成功!");
             holder.default_address_view.setVisibility(View.VISIBLE);
+        }
+        else{
+            holder.default_address_view.setVisibility(View.GONE);
         }
     }
 

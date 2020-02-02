@@ -73,7 +73,5 @@ public class Add_address extends AppCompatActivity {
             }
         });
     }
-    public void getType(){
 
-    }
 }
